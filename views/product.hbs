@@ -1,0 +1,133 @@
+<div class="body_index2" >
+    <div class="header_index2">
+        <div class="headr_logo">
+            <img src="images/logo.png" />
+            <h2>Dino Account</h2>
+        </div>
+        <div class="header_account">
+            <img src="images/avatar.JPG" />
+            <p>nhocdathacko</p>
+            <a href="login.html"><button>Đăng xuất</button></a>
+        </div>
+    </div>
+
+    <ul class="menu-list">
+        <a href="index.html" class="tablinks">
+            <li>Trang chủ</li>
+        </a>
+        <a href="xep_hang.html" class="tablinks">
+            <li>Xếp hạng</li>
+        </a>
+        <a href="thu_vien.html" class="tablinks">
+            <li>Thư viện</li>
+        </a>
+        <a href="ho_tro.html" class="tablinks">
+            <li>Hỗ trợ</li>
+        </a>
+        <a href="nap_the.html" class="tablinks" style="color: red;
+            border-bottom: 2px solid red;">
+            <li>Nạp thẻ</li>
+        </a>
+    </ul>
+
+    <div class="tabcontent" >
+        <div class="nap_the">
+            <div class="coins">
+                <div class="tab_coin">
+                    <h3 class="tablinks"
+                        style="padding:10px 15px 10px 15px; border-bottom: 1px solid rgb(175, 175, 175); color:red;">
+                        <p>Giá</p>
+                        <p>Vàng</p>
+                    </h3>
+                    <button class="tablinks" onclick="openCity(100000, 10)">
+                        <p>10.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x10</p>
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(20000, 22)">
+                        <p>20.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x22</p>
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(50000, 55)">
+                        <p>50.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x55</p>
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(100000, 110)">
+                        <p>100.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x110</p>
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(200000, 220)">
+                        <p>200.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x220</p>
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(500000, 550)">
+                        <p>500.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x550</p>
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(1000000, 1100)">
+                        <p>1.000.000&nbsp;VND</p>
+                        <div class="items_coin"><img src="images/coin.png">
+                            <p>&nbsp;x1100</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="info_coins">
+                <form role="form" method="post" class="tabcontent_icon" onsubmit="return validation()"
+                    enctype="multipart/form-data">
+                    <h4 class="hr_line">Chi tiết giao dịch</h4>
+                    <div class="info2_coin hr_line">
+                        <p>Sản phẩm được chọn</p>
+                        <div class="items_coin">
+                            <input id="coin" type="text" class="input_coin" value="0" disabled="true">&nbsp;
+                            <img src="images/coin.png">
+                        </div>
+                    </div>
+                    <div class="info2_coin hr_line">
+                        <p>Giá</p>
+                        <div class="items_coin">
+                            <input id="VND" type="text" class="input_coin" value="0" disabled="true">&nbsp;
+                            <p>VND</p>
+                        </div>
+                    </div>
+                    <div class="info2_coin hr_line">
+                        <p>Phương thức thanh toán</p>
+                        <P>Ví MoMo</p>
+                    </div>
+                    <div class="info2_coin hr_line">
+                        <p>Tên tài khoản trong game</p>
+                        <P>Datdeptraivodich</p>
+                    </div>
+                    <button onchange="validation()" type="submit" id="submit" class="bt_pay">Xử lý thanh
+                        toán</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openCity(VND, coin) {
+        document.getElementById('coin').value = coin;
+        document.getElementById('VND').value = VND;
+
+    }
+
+    function validation() {
+        const VND = document.getElementById('VND').value;
+        if (VND == 0) {
+            alert('Hãy chọn số tiền bạn muốn nạp');
+            return false;
+        }
+    }
+</script>
